@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
+import React from "react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const pages = [
   "Under a starlit sky, ink shimmered into constellations. This was where stories were born.",
