@@ -34,7 +34,7 @@ export default function ReaderPage() {
           </div>
         </div>
 
-        {/* Donation Sidebar */}
+        {/* Donation Sidebar (desktop) */}
         <div className="donation-sidebar">
           <p className="donation-text">
             Enjoy the book? Support the author!
@@ -59,6 +59,26 @@ export default function ReaderPage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky Mobile Donation Bar */}
+      <div className="mobile-sticky-donation">
+        <a
+          href={paypalLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="donate-button paypal"
+        >
+          PayPal
+        </a>
+        <a
+          href={kofiLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="donate-button kofi"
+        >
+          Ko-fi
+        </a>
+      </div>
     </div>
   );
 }
