@@ -1,7 +1,9 @@
-import React from "react";
-import "./ReaderPage.css"; // we’ll add styles here
+import React, { useState } from "react";
+import "./ReaderPage.css";
 
 export default function ReaderPage() {
+  const [loading, setLoading] = useState(true);
+
   return (
     <div className="page">
       <header className="site-header">
@@ -10,10 +12,19 @@ export default function ReaderPage() {
 
       <section className="reader-frame-wrapper">
         <div className="reader-frame">
+          {/* Loading overlay */}
+          {loading && (
+            <div className="loading-overlay">
+              <div className="spinner"></div>
+              <p>Loading your story...</p>
+            </div>
+          )}
+
           <iframe
             src="https://online.fliphtml5.com/bofup/khju/"
             title="DREAMERS"
             allowFullScreen
+            onLoad={() => setLoading(false)}
           />
         </div>
       </section>
