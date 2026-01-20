@@ -3,21 +3,21 @@
   display: flex;
   justify-content: center;
   padding: 2rem;
-  background: #111;
+  background: #111; /* dark page background */
   min-height: 80vh;
 }
 
-/* Framed iframe container with book shadow */
+/* Framed iframe container with shadow, now transparent */
 .reader-frame {
   position: relative;
   width: 90%;
   max-width: 1000px;
   padding-top: 60%; /* maintains aspect ratio */
-  background: #222;
+  background: transparent; /* transparent background */
   border-radius: 12px;
   overflow: hidden;
 
-  /* Smooth shadow + floating book effect */
+  /* Floating book shadow */
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7),
               0 8px 20px rgba(0, 0, 0, 0.5);
   transform: translateY(0);
@@ -38,6 +38,7 @@
   width: 100%;
   height: 100%;
   border: none;
+  background: transparent; /* ensures flipbook background is transparent */
 }
 
 /* Loading overlay styles */
@@ -66,7 +67,7 @@
 
 .loading-overlay.hidden {
   opacity: 0;
-  pointer-events: none;
+  pointer-events: none; /* lets users click iframe after load */
 }
 
 /* Spinner animation */
