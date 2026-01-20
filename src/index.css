@@ -12,6 +12,7 @@ button {
 button:disabled {
   cursor: not-allowed;
 }
+
 body {
   margin: 0;
   background: #0f1117;
