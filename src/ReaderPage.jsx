@@ -13,12 +13,12 @@ export default function ReaderPage() {
       <section className="reader-frame-wrapper">
         <div className="reader-frame">
           {/* Loading overlay */}
-          {loading && (
-            <div className="loading-overlay">
-              <div className="spinner"></div>
-              <p>Loading your story...</p>
-            </div>
-          )}
+          <div
+            className={`loading-overlay ${loading ? "visible" : "hidden"}`}
+          >
+            <div className="spinner"></div>
+            <p>Loading your story...</p>
+          </div>
 
           <iframe
             src="https://online.fliphtml5.com/bofup/khju/"
