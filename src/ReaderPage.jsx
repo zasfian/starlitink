@@ -4,7 +4,7 @@ import "./ReaderPage.css";
 export default function ReaderPage() {
   const [loading, setLoading] = useState(true);
 
-  const paypalLink = "https://www.paypal.com/donate?hosted_button_id=YOUR_PAYPAL_ID"; // replace with your PayPal ID
+  const paypalLink = "https://www.paypal.com/donate?hosted_button_id=YOUR_PAYPAL_ID"; // replace with your PayPal hosted button ID
   const kofiLink = "https://ko-fi.com/YOUR_KOFI_USERNAME"; // replace with your Ko-fi username
 
   return (
@@ -14,7 +14,7 @@ export default function ReaderPage() {
       </header>
 
       <section className="reader-donation-container">
-        {/* Reader */}
+        {/* FlipHTML5 Reader */}
         <div className="reader-frame-wrapper">
           <div className="reader-frame book-shadow">
             {loading && (
