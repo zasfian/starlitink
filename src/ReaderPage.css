@@ -1,4 +1,4 @@
-/* Page header */
+/* Header */
 .site-header {
   text-align: center;
   padding: 1rem 0;
@@ -9,7 +9,7 @@
   background: #111;
 }
 
-/* Container holding reader + donation sidebar */
+/* Container: reader + donation sidebar */
 .reader-donation-container {
   display: flex;
   justify-content: center;
@@ -17,22 +17,22 @@
   gap: 2rem;
   padding: 2rem;
   background: #111;
-  flex-wrap: wrap; /* ensures mobile stacking */
+  flex-wrap: wrap; /* allows mobile stacking */
 }
 
 /* Reader frame wrapper */
 .reader-frame-wrapper {
-  flex: 1 1 600px; /* grows but min 600px */
+  flex: 1 1 600px;
   display: flex;
   justify-content: center;
 }
 
-/* Framed iframe container with shadow */
+/* Reader frame */
 .reader-frame {
   position: relative;
   width: 100%;
   max-width: 900px;
-  padding-top: 60%; /* keeps aspect ratio */
+  padding-top: 60%; /* maintain aspect ratio */
   background: transparent;
   border-radius: 12px;
   overflow: hidden;
@@ -87,14 +87,12 @@
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
 /* Donation sidebar */
 .donation-sidebar {
-  flex: 0 0 220px; /* fixed width on desktop */
+  flex: 0 0 220px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -104,11 +102,10 @@
 .donation-text {
   font-family: sans-serif;
   color: #fff;
-  text-align: center;
   font-weight: bold;
+  text-align: center;
 }
 
-/* Donation buttons */
 .donation-buttons {
   display: flex;
   flex-direction: column;
