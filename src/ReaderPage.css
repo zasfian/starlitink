@@ -170,13 +170,14 @@
     padding: 0.8rem 0;
     z-index: 50;
     border-top: 1px solid #444;
-    animation: slideUp 0.8s ease forwards; /* slide-in animation */
-    animation-delay: 0.5s; /* slight delay */
+    animation: slideUp 0.8s ease forwards;
+    animation-delay: 0.5s;
   }
 
   .mobile-sticky-donation .donate-button {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+    animation: pulse 2s infinite;
   }
 
   /* Slide-in animation */
@@ -189,5 +190,12 @@
       bottom: 0;
       opacity: 1;
     }
+  }
+
+  /* Pulse animation */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
   }
 }
