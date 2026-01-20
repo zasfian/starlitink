@@ -4,7 +4,7 @@ import "./ReaderPage.css";
 export default function ReaderPage() {
   const [loading, setLoading] = useState(true);
 
-  const paypalLink = "https://www.paypal.com/donate?hosted_button_id=YOUR_PAYPAL_ID"; // replace with your PayPal hosted button ID
+  const paypalLink = "https://www.paypal.com/donate?hosted_button_id=YOUR_PAYPAL_ID"; // replace with your PayPal ID
   const kofiLink = "https://ko-fi.com/YOUR_KOFI_USERNAME"; // replace with your Ko-fi username
 
   return (
@@ -14,6 +14,7 @@ export default function ReaderPage() {
       </header>
 
       <section className="reader-donation-container">
+        {/* Reader */}
         <div className="reader-frame-wrapper">
           <div className="reader-frame book-shadow">
             {loading && (
@@ -22,16 +23,18 @@ export default function ReaderPage() {
                 <p>Loading your story...</p>
               </div>
             )}
-
             <iframe
               src="https://online.fliphtml5.com/bofup/khju/"
               title="DREAMERS"
               allowFullScreen
+              scrolling="no"
+              frameBorder="0"
               onLoad={() => setLoading(false)}
             />
           </div>
         </div>
 
+        {/* Donation Sidebar */}
         <div className="donation-sidebar">
           <p className="donation-text">
             Enjoy the book? Support the author!
