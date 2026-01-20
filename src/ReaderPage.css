@@ -1,26 +1,43 @@
-/* Container for the reader */
-.reader-frame-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-  background: #111; /* dark page background */
-  min-height: 80vh;
+/* Page header */
+.site-header {
+  text-align: center;
+  padding: 1rem 0;
+  color: #fff;
+  font-family: "Georgia", serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  background: #111;
 }
 
-/* Framed iframe container with floating shadow, transparent */
+/* Container holding reader + donation sidebar */
+.reader-donation-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  background: #111;
+  flex-wrap: wrap; /* ensures mobile stacking */
+}
+
+/* Reader frame wrapper */
+.reader-frame-wrapper {
+  flex: 1 1 600px; /* grows but min 600px */
+  display: flex;
+  justify-content: center;
+}
+
+/* Framed iframe container with shadow */
 .reader-frame {
   position: relative;
-  width: 90%;
-  max-width: 1000px;
-  padding-top: 60%; /* maintains aspect ratio */
+  width: 100%;
+  max-width: 900px;
+  padding-top: 60%; /* keeps aspect ratio */
   background: transparent;
   border-radius: 12px;
   overflow: hidden;
-
-  /* Floating book shadow */
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7),
               0 8px 20px rgba(0, 0, 0, 0.5);
-  transform: translateY(0);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -30,7 +47,6 @@
               0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
-/* Actual iframe */
 .reader-frame iframe {
   position: absolute;
   top: 0;
@@ -41,7 +57,7 @@
   background: transparent;
 }
 
-/* Loading overlay styles */
+/* Loading overlay */
 .loading-overlay {
   position: absolute;
   top: 0;
@@ -58,19 +74,8 @@
   font-family: sans-serif;
   font-size: 1.2rem;
   text-align: center;
-
-  /* Fade-out transition */
-  opacity: 1;
-  transition: opacity 0.6s ease;
-  pointer-events: all;
 }
 
-.loading-overlay.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Spinner animation */
 .spinner {
   width: 50px;
   height: 50px;
@@ -87,43 +92,41 @@
   }
 }
 
-/* Header styling */
-.site-header {
-  text-align: center;
-  padding: 1rem 0;
-  color: #fff;
-  font-family: "Georgia", serif;
-  font-size: 2rem;
-  letter-spacing: 2px;
+/* Donation sidebar */
+.donation-sidebar {
+  flex: 0 0 220px; /* fixed width on desktop */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
 
-/* Donation section styling */
-.donation-section {
-  text-align: center;
-  margin: 1rem 0;
+.donation-text {
   font-family: sans-serif;
   color: #fff;
+  text-align: center;
+  font-weight: bold;
 }
 
+/* Donation buttons */
 .donation-buttons {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 0.5rem;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
 }
 
 .donate-button {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
+  text-align: center;
+  padding: 0.6rem 1rem;
   border-radius: 6px;
-  text-decoration: none;
   font-weight: bold;
-  transition: transform 0.2s ease;
+  text-decoration: none;
   color: #fff;
+  transition: transform 0.2s ease;
 }
 
-/* Individual button colors */
 .donate-button.paypal {
   background: #0070ba;
 }
@@ -136,4 +139,24 @@
 }
 .donate-button.kofi:hover {
   background: #1f8cb5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .reader-donation-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .donation-sidebar {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .donation-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
