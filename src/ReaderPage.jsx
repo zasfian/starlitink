@@ -11,7 +11,7 @@ export default function ReaderPage() {
       </header>
 
       <section className="reader-frame-wrapper">
-        <div className="reader-frame">
+        <div className="reader-frame book-shadow">
           {/* Loading overlay */}
           <div
             className={`loading-overlay ${loading ? "visible" : "hidden"}`}
