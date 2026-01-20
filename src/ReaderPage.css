@@ -1,3 +1,4 @@
+/* Container for the reader */
 .reader-frame-wrapper {
   display: flex;
   justify-content: center;
@@ -6,17 +7,19 @@
   min-height: 80vh;
 }
 
+/* Framed iframe container */
 .reader-frame {
   position: relative;
   width: 90%;
   max-width: 1000px;
-  padding-top: 60%; /* maintains 16:9-ish ratio */
+  padding-top: 60%; /* maintains aspect ratio */
   background: #222;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   border-radius: 12px;
   overflow: hidden;
 }
 
+/* Actual iframe */
 .reader-frame iframe {
   position: absolute;
   top: 0;
@@ -24,4 +27,40 @@
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* Loading overlay styles */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  z-index: 10;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Simple spinner animation */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #555;
+  border-top: 5px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
