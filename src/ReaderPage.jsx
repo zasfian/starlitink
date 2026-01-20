@@ -9,9 +9,8 @@ export default function ReaderPage() {
 
       <section className="reader-frame">
         <iframe
-          src="<div style="https://online.fliphtml5.com/bofup/khju/
-"
-          title="Starlit Ink Reader"
+          src="https://online.fliphtml5.com/bofup/khju/"
+          title="DREAMERS"
           allowFullScreen
         />
       </section>
