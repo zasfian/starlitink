@@ -13,69 +13,49 @@ export default function ReaderPage() {
         <h1>Starlit Ink</h1>
       </header>
 
-      {/* Donation Section above the reader */}
-      <div className="donation-section">
-        <p>If you enjoy this book, please consider supporting the author!</p>
-        <div className="donation-buttons">
-          <a
-            href={paypalLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="donate-button paypal"
-          >
-            Donate via PayPal
-          </a>
-          <a
-            href={kofiLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="donate-button kofi"
-          >
-            Support on Ko-fi
-          </a>
+      <section className="reader-donation-container">
+        <div className="reader-frame-wrapper">
+          <div className="reader-frame book-shadow">
+            {loading && (
+              <div className="loading-overlay visible">
+                <div className="spinner"></div>
+                <p>Loading your story...</p>
+              </div>
+            )}
+
+            <iframe
+              src="https://online.fliphtml5.com/bofup/khju/"
+              title="DREAMERS"
+              allowFullScreen
+              onLoad={() => setLoading(false)}
+            />
+          </div>
         </div>
-      </div>
 
-      <section className="reader-frame-wrapper">
-        <div className="reader-frame book-shadow">
-          {/* Loading overlay */}
-          {loading && (
-            <div className="loading-overlay visible">
-              <div className="spinner"></div>
-              <p>Loading your story...</p>
-            </div>
-          )}
-
-          <iframe
-            src="https://online.fliphtml5.com/bofup/khju/"
-            title="DREAMERS"
-            allowFullScreen
-            onLoad={() => setLoading(false)}
-          />
+        <div className="donation-sidebar">
+          <p className="donation-text">
+            Enjoy the book? Support the author!
+          </p>
+          <div className="donation-buttons">
+            <a
+              href={paypalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="donate-button paypal"
+            >
+              Donate via PayPal
+            </a>
+            <a
+              href={kofiLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="donate-button kofi"
+            >
+              Support on Ko-fi
+            </a>
+          </div>
         </div>
       </section>
-
-      {/* Donation Section below the reader */}
-      <div className="donation-section">
-        <div className="donation-buttons">
-          <a
-            href={paypalLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="donate-button paypal"
-          >
-            Donate via PayPal
-          </a>
-          <a
-            href={kofiLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="donate-button kofi"
-          >
-            Support on Ko-fi
-          </a>
-        </div>
-      </div>
     </div>
   );
 }
