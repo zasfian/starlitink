@@ -22,7 +22,7 @@
 
 /* Reader frame wrapper */
 .reader-frame-wrapper {
-  flex: 1 1 600px; /* min width 600px on desktop */
+  flex: 1 1 600px;
   display: flex;
   justify-content: center;
 }
@@ -134,7 +134,11 @@
   background: #1f8cb5;
 }
 
-/* Responsive adjustments */
+/* Sticky Mobile Donation Bar */
+.mobile-sticky-donation {
+  display: none; /* hidden on desktop */
+}
+
 @media (max-width: 900px) {
   .reader-donation-container {
     flex-direction: column;
@@ -151,5 +155,25 @@
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
+  }
+
+  /* Show sticky donation bar on mobile */
+  .mobile-sticky-donation {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(17, 17, 17, 0.95);
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    z-index: 50;
+    border-top: 1px solid #444;
+  }
+
+  .mobile-sticky-donation .donate-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 }
