@@ -3,9 +3,10 @@ import "./ReaderPage.css";
 
 export default function ReaderPage() {
   const [loading, setLoading] = useState(true);
+  const [iframeError, setIframeError] = useState(false);
 
-  const paypalLink = "https://www.paypal.com/donate?hosted_button_id=YOUR_PAYPAL_ID"; // replace with your PayPal hosted button ID
-  const kofiLink = "https://ko-fi.com/YOUR_KOFI_USERNAME"; // replace with your Ko-fi username
+  const paypalLink = "https://www.paypal.com/donate?hosted_button_id=YOUR_PAYPAL_ID"; // replace
+  const kofiLink = "https://ko-fi.com/YOUR_KOFI_USERNAME"; // replace
 
   return (
     <div className="page">
@@ -23,18 +24,39 @@ export default function ReaderPage() {
                 <p>Loading your story...</p>
               </div>
             )}
-            <iframe
-              src="https://online.fliphtml5.com/bofup/khju/"
-              title="DREAMERS"
-              allowFullScreen
-              scrolling="no"
-              frameBorder="0"
-              onLoad={() => setLoading(false)}
-            />
+            {!iframeError ? (
+              <iframe
+                src="https://online.fliphtml5.com/bofup/khju/"
+                title="DREAMERS"
+                allowFullScreen
+                scrolling="no"
+                frameBorder="0"
+                onLoad={() => setLoading(false)}
+                onError={() => {
+                  setLoading(false);
+                  setIframeError(true);
+                }}
+              />
+            ) : (
+              <div className="iframe-fallback">
+                <p>
+                  FlipHTML5 viewer cannot load on your device.
+                  <br />
+                  You can read the book directly here:
+                  <a
+                    href="https://online.fliphtml5.com/bofup/khju/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open Book
+                  </a>
+                </p>
+              </div>
+            )}
           </div>
         </div>
 
-        {/* Donation Sidebar (desktop) */}
+        {/* Desktop Donation Sidebar */}
         <div className="donation-sidebar">
           <p className="donation-text">
             Enjoy the book? Support the author!
@@ -60,7 +82,7 @@ export default function ReaderPage() {
         </div>
       </section>
 
-      {/* Sticky Mobile Donation Bar */}
+      {/* Mobile Sticky Donation Bar */}
       <div className="mobile-sticky-donation">
         <a
           href={paypalLink}
@@ -82,3 +104,4 @@ export default function ReaderPage() {
     </div>
   );
 }
+``
