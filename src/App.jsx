@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// KoFi Donate Button Component with Coffee Icon & Custom Tooltip
+// KoFi Donate Button Component with Coffee Icon & Tooltip
 function KoFiDonateButton() {
   const koFiUrl = "https://ko-fi.com/dreamzfree";
   const [showTooltip, setShowTooltip] = useState(false);
@@ -21,19 +21,22 @@ function KoFiDonateButton() {
       <h2 style={{ margin: "0.5rem 0", fontSize: "1.8rem", color: "#E67E22" }}>
         ❤️ Support the Author
       </h2>
+
       <p style={{ fontSize: "1rem", color: "#333", marginBottom: "0.5rem" }}>
         If you’re enjoying <em>Starlit Ink</em>, you can support the project by sending a small tip via Ko‑fi.
       </p>
 
-      {/* Suggested Minimum Support with Custom Tooltip */}
+      {/* Suggested Minimum Support */}
       <div
         style={{ position: "relative", display: "inline-block", marginBottom: "1rem" }}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
       >
-        <p style={{ fontSize: "0.9rem", color: "#555", cursor: "help", margin: 0 }}>
+        <p style={{ fontSize: "0.95rem", color: "#555", cursor: "help", margin: 0 }}>
           Suggested minimum support: <strong>MYR 5</strong> 💖
         </p>
+
+        {/* Custom Tooltip */}
         {showTooltip && (
           <div
             style={{
@@ -51,12 +54,12 @@ function KoFiDonateButton() {
               zIndex: 10,
             }}
           >
-            To ensure the author actually receives most of your donation after PayPal fees, we recommend a minimum tip of MYR 5.
+            To ensure the author receives most of your donation after PayPal fees, we recommend a minimum tip of MYR 5.
           </div>
         )}
       </div>
 
-      {/* Donate Button */}
+      {/* Ko-fi Donate Button */}
       <a
         href={koFiUrl}
         target="_blank"
@@ -74,6 +77,8 @@ function KoFiDonateButton() {
           borderRadius: "6px",
           transition: "all 0.2s ease-in-out",
         }}
+        onMouseEnter={() => setShowTooltip(true)}
+        onMouseLeave={() => setShowTooltip(false)}
         onMouseOver={(e) => {
           e.currentTarget.style.background = "#0d8ecf";
           e.currentTarget.style.transform = "scale(1.05)";
