@@ -121,6 +121,7 @@ export default function App() {
         <KoFiDonateButton />
       </main>
 
+      {/* Footer */}
       <footer
         style={{
           textAlign: "center",
