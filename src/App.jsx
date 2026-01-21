@@ -74,9 +74,10 @@ export default function App() {
           src={logo}
           alt="DREAMERS Logo"
           style={{
-            maxWidth: "400px",   // Maximum width for desktop
-            width: "90%",        // Scales down on smaller screens
-            height: "auto",      // Maintains aspect ratio
+            width: "90%",          // scales down for small screens
+            maxWidth: "400px",     // max width on desktop
+            minWidth: "180px",     // never too small on mobile
+            height: "auto",
             margin: "0 auto",
             display: "block",
           }}
