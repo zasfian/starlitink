@@ -22,41 +22,54 @@ function KoFiDonateButton() {
         ❤️ Support the Author
       </h2>
 
-      <p style={{ fontSize: "1rem", color: "#333", marginBottom: "0.5rem" }}>
+      <p style={{ fontSize: "1rem", color: "#333", marginBottom: "1rem" }}>
         If you’re enjoying <em>Starlit Ink</em>, you can support the project by sending a small tip via Ko‑fi.
       </p>
 
-      {/* Suggested Minimum Support */}
-      <div
-        style={{ position: "relative", display: "inline-block", marginBottom: "1rem" }}
-        onMouseEnter={() => setShowTooltip(true)}
-        onMouseLeave={() => setShowTooltip(false)}
-      >
-        <p style={{ fontSize: "0.95rem", color: "#555", cursor: "help", margin: 0 }}>
-          Suggested minimum support: <strong>MYR 5</strong> 💖
-        </p>
-
-        {/* Custom Tooltip */}
-        {showTooltip && (
-          <div
-            style={{
-              position: "absolute",
-              bottom: "125%",
-              left: "50%",
-              transform: "translateX(-50%)",
-              backgroundColor: "#333",
-              color: "#fff",
-              padding: "0.5rem 0.75rem",
-              borderRadius: "6px",
-              fontSize: "0.8rem",
-              whiteSpace: "nowrap",
-              boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
-              zIndex: 10,
-            }}
-          >
-            To ensure the author receives most of your donation after PayPal fees, we recommend a minimum tip of MYR 5.
-          </div>
-        )}
+      {/* Suggested Minimum Support with Info Icon */}
+      <div style={{ marginBottom: "1rem", fontSize: "0.95rem", color: "#333" }}>
+        Suggested minimum support: <strong>MYR 5</strong>{" "}
+        <span
+          onMouseEnter={() => setShowTooltip(true)}
+          onMouseLeave={() => setShowTooltip(false)}
+          style={{
+            display: "inline-block",
+            width: "16px",
+            height: "16px",
+            lineHeight: "16px",
+            textAlign: "center",
+            borderRadius: "50%",
+            backgroundColor: "#29abe0",
+            color: "#fff",
+            fontWeight: "bold",
+            cursor: "help",
+            fontSize: "0.75rem",
+            marginLeft: "0.25rem",
+            position: "relative",
+          }}
+        >
+          i
+          {showTooltip && (
+            <div
+              style={{
+                position: "absolute",
+                bottom: "125%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                backgroundColor: "#333",
+                color: "#fff",
+                padding: "0.5rem 0.75rem",
+                borderRadius: "6px",
+                fontSize: "0.8rem",
+                whiteSpace: "nowrap",
+                boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
+                zIndex: 10,
+              }}
+            >
+              To ensure the author receives most of your donation after PayPal fees, we recommend a minimum tip of MYR 5.
+            </div>
+          )}
+        </span>
       </div>
 
       {/* Ko-fi Donate Button */}
@@ -77,8 +90,6 @@ function KoFiDonateButton() {
           borderRadius: "6px",
           transition: "all 0.2s ease-in-out",
         }}
-        onMouseEnter={() => setShowTooltip(true)}
-        onMouseLeave={() => setShowTooltip(false)}
         onMouseOver={(e) => {
           e.currentTarget.style.background = "#0d8ecf";
           e.currentTarget.style.transform = "scale(1.05)";
