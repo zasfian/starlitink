@@ -1,6 +1,6 @@
 import React from "react";
 
-// KoFi Donate Button Component with Coffee Icon
+// KoFi Donate Button Component
 function KoFiDonateButton() {
   const koFiUrl = "https://ko-fi.com/dreamzfree";
 
@@ -20,12 +20,9 @@ function KoFiDonateButton() {
       <h2 style={{ margin: "0.5rem 0", fontSize: "1.8rem", color: "#E67E22" }}>
         ❤️ Support the Author
       </h2>
-
       <p style={{ fontSize: "1rem", color: "#333", marginBottom: "1rem" }}>
         If you’re enjoying <em>Starlit Ink</em>, you can support the project by sending a tip via Ko‑fi.
       </p>
-
-      {/* Ko-fi Donate Button */}
       <a
         href={koFiUrl}
         target="_blank"
@@ -63,25 +60,31 @@ function KoFiDonateButton() {
 export default function App() {
   return (
     <div style={{ background: "#1a1a1a", minHeight: "100vh", color: "#fff" }}>
-      {/* Header with Clarification Text */}
-      <header style={{ textAlign: "center", padding: "2rem 1rem", display: "block" }}>
-        <div style={{ display: "inline-block" }}>
-          <h1 style={{ fontSize: "2.5rem", margin: 0, color: "#fff" }}>Starlit Ink</h1>
-          <p
-            style={{
-              fontSize: "1.1rem",
-              color: "#fff",
-              marginTop: "0.75rem",
-              lineHeight: "1.4",
-              fontStyle: "italic",
-            }}
-          >
-            Welcome to Starlit Ink — a personal collection of stories told through flipbooks, videos, and creative formats.
-          </p>
-        </div>
+      {/* Header with clarification text */}
+      <header
+        style={{
+          textAlign: "center",
+          padding: "2rem 1rem",
+          position: "relative",
+          zIndex: 10,
+          backgroundColor: "#1a1a1a", // ensure header background matches dark theme
+        }}
+      >
+        <h1 style={{ fontSize: "2.5rem", margin: 0, color: "#fff" }}>Starlit Ink</h1>
+        <p
+          style={{
+            fontSize: "1.1rem",
+            color: "#fff",
+            marginTop: "0.75rem",
+            lineHeight: "1.4",
+            fontStyle: "italic",
+          }}
+        >
+          Welcome to Starlit Ink — a personal collection of stories told through flipbooks, videos, and creative formats.
+        </p>
       </header>
 
-      <main style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <main style={{ display: "flex", flexDirection: "column", alignItems: "center", position: "relative" }}>
         {/* FlipHTML5 Embed */}
         <div
           style={{
@@ -91,6 +94,7 @@ export default function App() {
             maxWidth: "1000px",
             height: 0,
             margin: "2rem 0",
+            zIndex: 1,
           }}
         >
           <iframe
