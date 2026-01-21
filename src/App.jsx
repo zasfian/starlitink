@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./assets/logo.png"; // Make sure your image is in src/assets/logo.png
+import logo from "./assets/dreamers-logo-header.png"; // Make sure this matches your uploaded file name exactly
 
 // Ko-fi Donate Button Component
 function KoFiDonateButton() {
