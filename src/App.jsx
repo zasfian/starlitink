@@ -63,10 +63,17 @@ function KoFiDonateButton() {
 export default function App() {
   return (
     <div style={{ background: "#1a1a1a", minHeight: "100vh", color: "#fff" }}>
-      {/* Header with Storytelling Clarification */}
+      {/* Header with Clarification Text */}
       <header style={{ textAlign: "center", padding: "1rem 0" }}>
         <h1 style={{ fontSize: "2rem", margin: 0 }}>Starlit Ink</h1>
-        <p style={{ fontSize: "1rem", color: "#ccc", marginTop: "0.25rem" }}>
+        <p
+          style={{
+            fontSize: "1.05rem",
+            color: "#eee",
+            marginTop: "0.5rem",
+            fontStyle: "italic",
+          }}
+        >
           Welcome to Starlit Ink — a personal collection of stories told through flipbooks, videos, and creative formats.
         </p>
       </header>
