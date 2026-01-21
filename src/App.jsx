@@ -1,6 +1,6 @@
 import React from "react";
 
-// KoFi Donate Button Component with Coffee Icon & Hover Animation
+// KoFi Donate Button Component with Coffee Icon & Minimum Support Info
 function KoFiDonateButton() {
   const koFiUrl = "https://ko-fi.com/dreamzfree";
 
@@ -21,9 +21,17 @@ function KoFiDonateButton() {
       <h2 style={{ margin: "0.5rem 0", fontSize: "1.8rem", color: "#E67E22" }}>
         ❤️ Support the Author
       </h2>
-      <p style={{ fontSize: "1rem", color: "#333", marginBottom: "1rem" }}>
+      <p style={{ fontSize: "1rem", color: "#333", marginBottom: "0.5rem" }}>
         If you’re enjoying <em>Starlit Ink</em>, you can support the project by sending a small tip via Ko‑fi.
       </p>
+
+      {/* Suggested Minimum Support */}
+      <p style={{ fontSize: "0.9rem", color: "#555", marginBottom: "1rem" }}>
+        Suggested minimum support: <strong>MYR 5</strong> 💖<br />
+        (This ensures that after processing fees, the author receives most of your donation.)
+      </p>
+
+      {/* Donate Button */}
       <a
         href={koFiUrl}
         target="_blank"
@@ -50,7 +58,6 @@ function KoFiDonateButton() {
           e.currentTarget.style.transform = "scale(1)";
         }}
       >
-        {/* Coffee Cup Unicode Icon */}
         <span style={{ fontSize: "1.3rem" }}>☕</span>
         Support on Ko‑fi
       </a>
