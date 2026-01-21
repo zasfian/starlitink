@@ -62,7 +62,7 @@ function KoFiDonateButton() {
 export default function App() {
   return (
     <div style={{ background: "#1a1a1a", minHeight: "100vh", color: "#fff" }}>
-      {/* Header with Logo */}
+      {/* Header with Responsive Logo */}
       <header
         style={{
           textAlign: "center",
@@ -74,9 +74,9 @@ export default function App() {
           src={logo}
           alt="DREAMERS Logo"
           style={{
-            maxWidth: "400px",
-            width: "80%",
-            height: "auto",
+            maxWidth: "400px",   // Maximum width for desktop
+            width: "90%",        // Scales down on smaller screens
+            height: "auto",      // Maintains aspect ratio
             margin: "0 auto",
             display: "block",
           }}
