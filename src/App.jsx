@@ -64,18 +64,21 @@ export default function App() {
   return (
     <div style={{ background: "#1a1a1a", minHeight: "100vh", color: "#fff" }}>
       {/* Header with Clarification Text */}
-      <header style={{ textAlign: "center", padding: "1rem 0" }}>
-        <h1 style={{ fontSize: "2rem", margin: 0 }}>Starlit Ink</h1>
-        <p
-          style={{
-            fontSize: "1.05rem",
-            color: "#eee",
-            marginTop: "0.5rem",
-            fontStyle: "italic",
-          }}
-        >
-          Welcome to Starlit Ink — a personal collection of stories told through flipbooks, videos, and creative formats.
-        </p>
+      <header style={{ textAlign: "center", padding: "2rem 1rem", display: "block" }}>
+        <div style={{ display: "inline-block" }}>
+          <h1 style={{ fontSize: "2.5rem", margin: 0, color: "#fff" }}>Starlit Ink</h1>
+          <p
+            style={{
+              fontSize: "1.1rem",
+              color: "#fff",
+              marginTop: "0.75rem",
+              lineHeight: "1.4",
+              fontStyle: "italic",
+            }}
+          >
+            Welcome to Starlit Ink — a personal collection of stories told through flipbooks, videos, and creative formats.
+          </p>
+        </div>
       </header>
 
       <main style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
