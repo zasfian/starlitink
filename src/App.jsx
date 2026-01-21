@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "./assets/logo.png"; // Make sure your image is in src/assets/logo.png
 
 // Ko-fi Donate Button Component
 function KoFiDonateButton() {
@@ -61,7 +62,7 @@ function KoFiDonateButton() {
 export default function App() {
   return (
     <div style={{ background: "#1a1a1a", minHeight: "100vh", color: "#fff" }}>
-      {/* Header */}
+      {/* Header with Logo */}
       <header
         style={{
           textAlign: "center",
@@ -69,7 +70,17 @@ export default function App() {
           backgroundColor: "#1a1a1a",
         }}
       >
-        <h1 style={{ fontSize: "2.5rem", margin: 0, color: "#fff" }}>DREAMERS</h1>
+        <img
+          src={logo}
+          alt="DREAMERS Logo"
+          style={{
+            maxWidth: "400px",
+            width: "80%",
+            height: "auto",
+            margin: "0 auto",
+            display: "block",
+          }}
+        />
         <p
           style={{
             fontSize: "1.1rem",
