@@ -66,8 +66,6 @@ export default function App() {
         style={{
           textAlign: "center",
           padding: "3rem 1rem",
-          position: "relative",
-          zIndex: 10,
           backgroundColor: "#1a1a1a",
         }}
       >
@@ -81,7 +79,7 @@ export default function App() {
             fontStyle: "italic",
           }}
         >
-          Welcome to DREAMERS — a personal collection of stories told through flipbooks, videos, and creative formats.
+          Free to read graphic novel.
         </p>
       </header>
 
@@ -95,7 +93,6 @@ export default function App() {
             maxWidth: "1000px",
             height: 0,
             margin: "2rem 0",
-            zIndex: 1,
           }}
         >
           <iframe
