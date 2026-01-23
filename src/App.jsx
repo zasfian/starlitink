@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./assets/dreamers-logo-header.png"; // Make sure this matches your uploaded file name exactly
+import logo from "./assets/dreamers-logo-header.png";
 
 // Ko-fi Donate Button Component
 function KoFiDonateButton() {
@@ -22,7 +22,7 @@ function KoFiDonateButton() {
       </h2>
 
       <p style={{ fontSize: "1rem", color: "#333", marginBottom: "1rem" }}>
-        If you’re enjoying <em>DREAMERS</em>, you can support the project by sending a tip via Ko‑fi.
+        If you’re enjoying <em>DREAMERS</em>, you can support the project by sending a tip via Ko-fi.
       </p>
 
       <a
@@ -52,7 +52,7 @@ function KoFiDonateButton() {
         }}
       >
         <span style={{ fontSize: "1.3rem" }}>☕</span>
-        Support on Ko‑fi
+        Support on Ko-fi
       </a>
     </section>
   );
@@ -62,7 +62,7 @@ function KoFiDonateButton() {
 export default function App() {
   return (
     <div style={{ background: "#1a1a1a", minHeight: "100vh", color: "#fff" }}>
-      {/* Header with Responsive Logo */}
+      {/* Header */}
       <header
         style={{
           textAlign: "center",
@@ -74,9 +74,9 @@ export default function App() {
           src={logo}
           alt="DREAMERS Logo"
           style={{
-            width: "90%",          // scales down for small screens
-            maxWidth: "400px",     // max width on desktop
-            minWidth: "180px",     // never too small on mobile
+            width: "90%",
+            maxWidth: "400px",
+            minWidth: "180px",
             height: "auto",
             margin: "0 auto",
             display: "block",
@@ -95,7 +95,7 @@ export default function App() {
         </p>
       </header>
 
-      {/* Flipbook Embed */}
+      {/* Flipbook Embed (UPDATED URL) */}
       <main style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div
           style={{
@@ -105,11 +105,12 @@ export default function App() {
             maxWidth: "1000px",
             height: 0,
             margin: "2rem 0",
+            overflow: "hidden",
           }}
         >
           <iframe
             title="DREAMERS"
-            src="https://online.fliphtml5.com/bofup/khju/"
+            src="https://online.fliphtml5.com/bofup/DREAMERS/"
             style={{
               position: "absolute",
               border: "none",
@@ -118,15 +119,12 @@ export default function App() {
               left: 0,
               top: 0,
             }}
-            seamless="seamless"
             scrolling="no"
-            frameBorder="0"
-            allowTransparency="true"
+            allow="fullscreen"
             allowFullScreen
-          ></iframe>
+          />
         </div>
 
-        {/* Ko-fi Donate Button */}
         <KoFiDonateButton />
       </main>
 
