@@ -10,10 +10,12 @@ export default function ReaderPage() {
 
   return (
     <div className="page">
+      {/* Header */}
       <header className="site-header">
         <h1>Starlit Ink</h1>
       </header>
 
+      {/* Reader + Donations */}
       <section className="reader-donation-container">
         {/* FlipHTML5 Reader */}
         <div className="reader-frame-wrapper">
@@ -24,13 +26,19 @@ export default function ReaderPage() {
                 <p>Loading your story...</p>
               </div>
             )}
+
             {!iframeError ? (
               <iframe
-                src="https://online.fliphtml5.com/bofup/khju/"
+                src="https://online.fliphtml5.com/bofup/DREAMERS/" // NEW URL
                 title="DREAMERS"
                 allowFullScreen
                 scrolling="no"
                 frameBorder="0"
+                style={{
+                  width: "100%",
+                  height: "80vh",       // ensures full visibility
+                  border: "none",
+                }}
                 onLoad={() => setLoading(false)}
                 onError={() => {
                   setLoading(false);
@@ -42,9 +50,9 @@ export default function ReaderPage() {
                 <p>
                   FlipHTML5 viewer cannot load on your device.
                   <br />
-                  You can read the book directly here:
+                  You can read the book directly here:{" "}
                   <a
-                    href="https://online.fliphtml5.com/bofup/khju/"
+                    href="https://online.fliphtml5.com/bofup/DREAMERS/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -104,4 +112,3 @@ export default function ReaderPage() {
     </div>
   );
 }
-``
