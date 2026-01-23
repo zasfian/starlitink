@@ -95,22 +95,21 @@ export default function App() {
         </p>
       </header>
 
-      {/* Flipbook Embed (UPDATED URL) */}
+      {/* FlipHTML5 Embed — EXACT TRANSLATION */}
       <main style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div
           style={{
             position: "relative",
             paddingTop: "max(60%, 324px)",
-            width: "90%",
+            width: "100%",
             maxWidth: "1000px",
             height: 0,
-            margin: "2rem 0",
-            overflow: "hidden",
+            margin: "2rem auto",
           }}
         >
           <iframe
-            title="DREAMERS"
             src="https://online.fliphtml5.com/bofup/DREAMERS/"
+            title="DREAMERS"
             style={{
               position: "absolute",
               border: "none",
